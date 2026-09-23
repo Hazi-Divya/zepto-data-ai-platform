@@ -1,0 +1,316 @@
+================================================================================
+Query 1 - In-stock books above £20
+================================================================================
+
+SQL:
+SELECT
+            title,
+            price_gbp,
+            rating,
+            in_stock
+        FROM books
+        WHERE in_stock = 1
+          AND price_gbp > 20
+        ORDER BY price_gbp DESC;
+
+Output:
+title | price_gbp | rating | in_stock
+----------------------------------------------------------------------------------------------------
+The Gray Rhino: How to Recognize and Act on the Obvious Dangers We Ignore | 59.15 | 4 | 1
+Watchmen | 58.05 | 4 | 1
+The Girl Who Kicked the Hornet's Nest (Millennium Trilogy #3) | 57.48 | 1 | 1
+John Adams | 57.43 | 4 | 1
+Fun Home: A Family Tragicomic | 56.59 | 4 | 1
+A Series of Catastrophes and Miracles: A True Story of Love, Science, and Cancer | 56.48 | 2 | 1
+A Brush of Wings (Angels Walking #3) | 55.51 | 1 | 1
+The Light of the Fireflies | 54.43 | 1 | 1
+Judo: Seven Steps to Black Belt (an Introductory Guide for Beginners) | 53.9 | 2 | 1
+The Blind Side: Evolution of a Game | 53.71 | 5 | 1
+Seven Days in the Art World | 52.33 | 2 | 1
+#GIRLBOSS | 50.96 | 1 | 1
+A Hero's Curse (The Unseen Chronicles #1) | 50.49 | 3 | 1
+Rogue Lawyer (Rogue Lawyer #1) | 50.11 | 3 | 1
+The Dovekeepers | 48.78 | 1 | 1
+Mere Christianity | 48.51 | 3 | 1
+Without Shame | 48.27 | 5 | 1
+The Case for Christ (Cases for Christianity) | 47.84 | 1 | 1
+The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy #1) | 47.8 | 3 | 1
+The God Delusion | 46.85 | 3 | 1
+A Game of Thrones (A Song of Ice and Fire #1) | 46.42 | 2 | 1
+Sarah's Key | 46.29 | 1 | 1
+The Joy of Cooking | 43.27 | 4 | 1
+Evicted: Poverty and Profit in the American City | 42.27 | 1 | 1
+The Complete Poems | 41.32 | 5 | 1
+A People's History of the United States | 40.79 | 2 | 1
+The Art Forger | 40.76 | 3 | 1
+The Immortal Life of Henrietta Lacks | 40.67 | 2 | 1
+Rook | 37.86 | 4 | 1
+More Than Music (Chasing the Dream #1) | 37.61 | 2 | 1
+The Song of Achilles | 37.4 | 5 | 1
+The Purpose Driven Life: What on Earth Am I Here for? | 37.19 | 3 | 1
+Good in Bed (Cannie Shapiro #1) | 37.05 | 5 | 1
+Cosmos | 36.17 | 2 | 1
+23 Degrees South: A Tropical Tale of Changing Whether... | 35.79 | 2 | 1
+The Drowning Girls | 35.67 | 3 | 1
+Manuscript Found in Accra | 34.98 | 2 | 1
+The Rest Is Noise: Listening to the Twentieth Century | 34.77 | 1 | 1
+Angels Walking (Angels Walking #1) | 34.2 | 2 | 1
+The Republic | 33.78 | 3 | 1
+The Sense of an Ending | 31.38 | 3 | 1
+The Raven King (The Raven Cycle #4) | 30.57 | 2 | 1
+The Odyssey | 29.64 | 3 | 1
+Shobu Samurai, Project Aryoku (#3) | 29.06 | 3 | 1
+Modern Romance | 28.26 | 5 | 1
+The Midnight Watch: A Novel of the Titanic and the Californian | 26.2 | 1 | 1
+The White Queen (The Cousins' War #1) | 25.91 | 5 | 1
+Lord of the Flies | 24.89 | 3 | 1
+The Catcher in the Rye | 24.55 | 1 | 1
+The Mindfulness and Acceptance Workbook for Anxiety: A Guide to Breaking Free from Anxiety, Phobias, and Worry Using Acceptance and Commitment Therapy | 23.89 | 4 | 1
+Find Her (Detective D.D. Warren #8) | 22.37 | 1 | 1
+Code Name Verity (Code Name Verity #1) | 22.13 | 4 | 1
+The End of Faith: Religion, Terror, and the Future of Reason | 22.13 | 4 | 1
+Fire Bound (Sea Haven/Sisters of the Heart #5) | 21.28 | 4 | 1
+Cell | 20.29 | 4 | 1
+Team of Rivals: The Political Genius of Abraham Lincoln | 20.12 | 5 | 1
+
+
+================================================================================
+Query 2 - Books ordered by price
+================================================================================
+
+SQL:
+SELECT
+            title,
+            price_gbp,
+            price_inr
+        FROM books
+        ORDER BY price_gbp DESC;
+
+Output:
+title | price_gbp | price_inr
+----------------------------------------------------------------------------------------------------
+The Gray Rhino: How to Recognize and Act on the Obvious Dangers We Ignore | 59.15 | 6240.325
+Watchmen | 58.05 | 6124.275
+The Girl Who Kicked the Hornet's Nest (Millennium Trilogy #3) | 57.48 | 6064.139999999999
+John Adams | 57.43 | 6058.865
+Fun Home: A Family Tragicomic | 56.59 | 5970.245000000001
+A Series of Catastrophes and Miracles: A True Story of Love, Science, and Cancer | 56.48 | 5958.639999999999
+A Brush of Wings (Angels Walking #3) | 55.51 | 5856.304999999999
+The Light of the Fireflies | 54.43 | 5742.365
+Judo: Seven Steps to Black Belt (an Introductory Guide for Beginners) | 53.9 | 5686.45
+The Blind Side: Evolution of a Game | 53.71 | 5666.405
+Seven Days in the Art World | 52.33 | 5520.815
+#GIRLBOSS | 50.96 | 5376.28
+A Hero's Curse (The Unseen Chronicles #1) | 50.49 | 5326.695000000001
+Rogue Lawyer (Rogue Lawyer #1) | 50.11 | 5286.605
+The Dovekeepers | 48.78 | 5146.29
+Mere Christianity | 48.51 | 5117.804999999999
+Without Shame | 48.27 | 5092.485000000001
+The Case for Christ (Cases for Christianity) | 47.84 | 5047.120000000001
+The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy #1) | 47.8 | 5042.9
+The God Delusion | 46.85 | 4942.675
+A Game of Thrones (A Song of Ice and Fire #1) | 46.42 | 4897.31
+Sarah's Key | 46.29 | 4883.595
+The Joy of Cooking | 43.27 | 4564.985000000001
+Evicted: Poverty and Profit in the American City | 42.27 | 4459.485000000001
+The Complete Poems | 41.32 | 4359.26
+A People's History of the United States | 40.79 | 4303.345
+The Art Forger | 40.76 | 4300.179999999999
+The Immortal Life of Henrietta Lacks | 40.67 | 4290.685
+Rook | 37.86 | 3994.23
+More Than Music (Chasing the Dream #1) | 37.61 | 3967.855
+The Song of Achilles | 37.4 | 3945.7
+The Purpose Driven Life: What on Earth Am I Here for? | 37.19 | 3923.545
+Good in Bed (Cannie Shapiro #1) | 37.05 | 3908.775
+Cosmos | 36.17 | 3815.935
+23 Degrees South: A Tropical Tale of Changing Whether... | 35.79 | 3775.845
+The Drowning Girls | 35.67 | 3763.185
+Manuscript Found in Accra | 34.98 | 3690.39
+The Rest Is Noise: Listening to the Twentieth Century | 34.77 | 3668.235
+Angels Walking (Angels Walking #1) | 34.2 | 3608.1
+The Republic | 33.78 | 3563.79
+The Sense of an Ending | 31.38 | 3310.59
+The Raven King (The Raven Cycle #4) | 30.57 | 3225.135
+The Odyssey | 29.64 | 3127.02
+Shobu Samurai, Project Aryoku (#3) | 29.06 | 3065.83
+Modern Romance | 28.26 | 2981.4300000000003
+The Midnight Watch: A Novel of the Titanic and the Californian | 26.2 | 2764.1
+The White Queen (The Cousins' War #1) | 25.91 | 2733.505
+Lord of the Flies | 24.89 | 2625.895
+The Catcher in the Rye | 24.55 | 2590.025
+The Mindfulness and Acceptance Workbook for Anxiety: A Guide to Breaking Free from Anxiety, Phobias, and Worry Using Acceptance and Commitment Therapy | 23.89 | 2520.395
+Find Her (Detective D.D. Warren #8) | 22.37 | 2360.0350000000003
+Code Name Verity (Code Name Verity #1) | 22.13 | 2334.715
+The End of Faith: Religion, Terror, and the Future of Reason | 22.13 | 2334.715
+Fire Bound (Sea Haven/Sisters of the Heart #5) | 21.28 | 2245.04
+Cell | 20.29 | 2140.595
+Team of Rivals: The Political Genius of Abraham Lincoln | 20.12 | 2122.6600000000003
+Pride and Prejudice | 19.27 | 2032.985
+The Torch Is Passed: A Harding Family Story | 19.09 | 2013.995
+The Golden Compass (His Dark Materials #1) | 18.77 | 1980.235
+The Glass Castle | 16.24 | 1713.32
+The Iliad | 16.16 | 1704.88
+One with You (Crossfire #5) | 15.71 | 1657.4050000000002
+Fifty Shades Freed (Fifty Shades #3) | 15.36 | 1620.48
+The Communist Manifesto | 14.76 | 1557.18
+On a Midnight Clear | 14.07 | 1484.385
+Logan Kade (Fallen Crest High #5.5) | 13.12 | 1384.16
+The Children | 11.88 | 1253.34
+A Clash of Kings (A Song of Ice and Fire #2) | 10.79 | 1138.3449999999998
+The Tipping Point: How Little Things Can Make a Big Difference | 10.02 | 1057.11
+
+
+================================================================================
+Query 3 - Top 10 most expensive books
+================================================================================
+
+SQL:
+SELECT
+            title,
+            price_gbp,
+            price_inr
+        FROM books
+        ORDER BY price_gbp DESC
+        LIMIT 10;
+
+Output:
+title | price_gbp | price_inr
+----------------------------------------------------------------------------------------------------
+The Gray Rhino: How to Recognize and Act on the Obvious Dangers We Ignore | 59.15 | 6240.325
+Watchmen | 58.05 | 6124.275
+The Girl Who Kicked the Hornet's Nest (Millennium Trilogy #3) | 57.48 | 6064.139999999999
+John Adams | 57.43 | 6058.865
+Fun Home: A Family Tragicomic | 56.59 | 5970.245000000001
+A Series of Catastrophes and Miracles: A True Story of Love, Science, and Cancer | 56.48 | 5958.639999999999
+A Brush of Wings (Angels Walking #3) | 55.51 | 5856.304999999999
+The Light of the Fireflies | 54.43 | 5742.365
+Judo: Seven Steps to Black Belt (an Introductory Guide for Beginners) | 53.9 | 5686.45
+The Blind Side: Evolution of a Game | 53.71 | 5666.405
+
+
+================================================================================
+Query 4 - Distinct categories
+================================================================================
+
+SQL:
+SELECT DISTINCT
+            category_name
+        FROM categories
+        ORDER BY category_name;
+
+Output:
+category_name
+----------------------------------------------------------------------------------------------------
+Academic
+Add a comment
+Adult Fiction
+
+
+================================================================================
+Query 5 - Books rated between 4 and 5
+================================================================================
+
+SQL:
+SELECT
+            title,
+            rating,
+            price_gbp
+        FROM books
+        WHERE rating BETWEEN 4 AND 5
+        ORDER BY rating DESC, price_gbp DESC;
+
+Output:
+title | rating | price_gbp
+----------------------------------------------------------------------------------------------------
+The Blind Side: Evolution of a Game | 5 | 53.71
+Without Shame | 5 | 48.27
+The Complete Poems | 5 | 41.32
+The Song of Achilles | 5 | 37.4
+Good in Bed (Cannie Shapiro #1) | 5 | 37.05
+Modern Romance | 5 | 28.26
+The White Queen (The Cousins' War #1) | 5 | 25.91
+Team of Rivals: The Political Genius of Abraham Lincoln | 5 | 20.12
+Fifty Shades Freed (Fifty Shades #3) | 5 | 15.36
+The Gray Rhino: How to Recognize and Act on the Obvious Dangers We Ignore | 4 | 59.15
+Watchmen | 4 | 58.05
+John Adams | 4 | 57.43
+Fun Home: A Family Tragicomic | 4 | 56.59
+The Joy of Cooking | 4 | 43.27
+Rook | 4 | 37.86
+The Mindfulness and Acceptance Workbook for Anxiety: A Guide to Breaking Free from Anxiety, Phobias, and Worry Using Acceptance and Commitment Therapy | 4 | 23.89
+Code Name Verity (Code Name Verity #1) | 4 | 22.13
+The End of Faith: Religion, Terror, and the Future of Reason | 4 | 22.13
+Fire Bound (Sea Haven/Sisters of the Heart #5) | 4 | 21.28
+Cell | 4 | 20.29
+Pride and Prejudice | 4 | 19.27
+One with You (Crossfire #5) | 4 | 15.71
+
+
+================================================================================
+Query 6 - Books from selected categories
+================================================================================
+
+SQL:
+SELECT
+            title,
+            category_id,
+            rating
+        FROM books
+        WHERE category_id IN (
+            SELECT category_id
+            FROM categories
+            WHERE category_name IN (
+                'Academic',
+                'Adult Fiction'
+            )
+        )
+        ORDER BY rating DESC, title;
+
+Output:
+title | category_id | rating
+----------------------------------------------------------------------------------------------------
+Fifty Shades Freed (Fifty Shades #3) | 3 | 5
+Logan Kade (Fallen Crest High #5.5) | 1 | 2
+
+
+================================================================================
+Query 7 - Books with category names using JOIN
+================================================================================
+
+SQL:
+SELECT
+            b.title,
+            b.rating,
+            b.price_gbp,
+            b.price_inr,
+            b.in_stock,
+            c.category_name
+        FROM books AS b
+        INNER JOIN categories AS c
+            ON b.category_id = c.category_id
+        ORDER BY c.category_name, b.rating DESC, b.title
+        LIMIT 20;
+
+Output:
+title | rating | price_gbp | price_inr | in_stock | category_name
+----------------------------------------------------------------------------------------------------
+Logan Kade (Fallen Crest High #5.5) | 2 | 13.12 | 1384.16 | 1 | Academic
+Good in Bed (Cannie Shapiro #1) | 5 | 37.05 | 3908.775 | 1 | Add a comment
+Modern Romance | 5 | 28.26 | 2981.4300000000003 | 1 | Add a comment
+Team of Rivals: The Political Genius of Abraham Lincoln | 5 | 20.12 | 2122.6600000000003 | 1 | Add a comment
+The Blind Side: Evolution of a Game | 5 | 53.71 | 5666.405 | 1 | Add a comment
+The Complete Poems | 5 | 41.32 | 4359.26 | 1 | Add a comment
+The Song of Achilles | 5 | 37.4 | 3945.7 | 1 | Add a comment
+The White Queen (The Cousins' War #1) | 5 | 25.91 | 2733.505 | 1 | Add a comment
+Without Shame | 5 | 48.27 | 5092.485000000001 | 1 | Add a comment
+Cell | 4 | 20.29 | 2140.595 | 1 | Add a comment
+Code Name Verity (Code Name Verity #1) | 4 | 22.13 | 2334.715 | 1 | Add a comment
+Fire Bound (Sea Haven/Sisters of the Heart #5) | 4 | 21.28 | 2245.04 | 1 | Add a comment
+Fun Home: A Family Tragicomic | 4 | 56.59 | 5970.245000000001 | 1 | Add a comment
+John Adams | 4 | 57.43 | 6058.865 | 1 | Add a comment
+One with You (Crossfire #5) | 4 | 15.71 | 1657.4050000000002 | 1 | Add a comment
+Pride and Prejudice | 4 | 19.27 | 2032.985 | 1 | Add a comment
+Rook | 4 | 37.86 | 3994.23 | 1 | Add a comment
+The End of Faith: Religion, Terror, and the Future of Reason | 4 | 22.13 | 2334.715 | 1 | Add a comment
+The Gray Rhino: How to Recognize and Act on the Obvious Dangers We Ignore | 4 | 59.15 | 6240.325 | 1 | Add a comment
+The Joy of Cooking | 4 | 43.27 | 4564.985000000001 | 1 | Add a comment
