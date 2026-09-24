@@ -164,9 +164,7 @@ The threshold rule was:
 
 \- 5%–30% missing → impute
 
-\- Very high missingness → drop the column when reliable imputation is not appropriate
-
-
+\- Very high missingness → drop the column when reliable imputation is not appropriate. The `deck` column had 77.22% missing values, so it was dropped because this level of missingness makes reliable imputation inappropriate.
 
 After cleaning, the dataset contained \*\*889 rows and 14 columns\*\*.
 
@@ -284,27 +282,17 @@ The columns `adult\_male` and `alone` were excluded because they are derived/red
 
 
 
-\## 5. Multivariate Data Story
-
-
+## 5. Multivariate Data Story
 
 Four charts were created to examine survival using multiple passenger characteristics.
 
+1. **Survival by Sex and Class** — Survival varies by both sex and passenger class. Female passengers generally had higher survival rates than male passengers within the same class, while higher-class passengers also showed higher survival in several groups.
 
+2. **Age, Fare and Survival** — Fare is concentrated at lower values, while some passengers paid much higher fares. Survival varies across different age and fare combinations, showing that age or fare alone does not fully explain the observed outcomes.
 
-1\. \*\*Survival by Sex and Class\*\* — Survival varies by both sex and passenger class, with higher survival rates among female and higher-class passengers.
+3. **Fare by Class and Survival** — Higher passenger classes generally have higher fares, with several high-fare outliers. Survival also varies within each class, indicating that passenger class and fare are related to the observed survival patterns.
 
-
-
-2\. \*\*Age, Fare and Survival\*\* — Fare is concentrated at lower values, while some passengers paid much higher fares. Survival varies across different age and fare combinations.
-
-
-
-3\. \*\*Fare by Class and Survival\*\* — Higher passenger classes generally have higher fares, with several high-fare outliers. Survival also varies within each class.
-
-
-
-4\. \*\*Survival by Siblings/Spouses and Class\*\* — Survival patterns vary with family-group size and passenger class, showing that multiple characteristics contribute to the observed survival patterns.
+4. **Survival by Siblings/Spouses and Class** — Survival patterns vary with the number of siblings or spouses and passenger class. Passenger class continues to distinguish survival patterns across different family-group sizes, showing the value of considering multiple characteristics together.
 
 
 
