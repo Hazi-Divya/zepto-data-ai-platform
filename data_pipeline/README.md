@@ -333,6 +333,13 @@ Books to Scrape
 4. **SQL Analysis** — Executes the required SQL queries and saves their outputs.
 5. **Pandas Analysis** — Reads SQL results using Pandas and reproduces the SQL `JOIN` using `pd.merge()`.
 
+## Installation
+
+From the project root:
+
+```bash
+pip install -r data_pipeline/requirements.txt
+```
 ### Run the Complete Pipeline
 
 From the project root:
