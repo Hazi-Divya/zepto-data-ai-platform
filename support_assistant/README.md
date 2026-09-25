@@ -1,4 +1,4 @@
-# Zepto Support Assistant
+# Module 3 - Zepto Support Assistant
 
 A RAG-based customer support API for answering questions about Zepto policies.
 
